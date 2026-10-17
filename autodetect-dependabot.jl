@@ -14,7 +14,7 @@ function _chop_refs_head(branch_name::AbstractString)
 end
 
 function _is_dependabot_branch(branch_name::AbstractString)
-    return startswith(branch_name, "dependabot/julia") || startswith(branch_name, "compathelper/")
+    return startswith(branch_name, "dependabot/julia") || startswith(branch_name, "compathelper/") || startswith(branch_name, "renovate/")
 end
 
 function is_dependabot_job()
